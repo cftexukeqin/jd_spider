@@ -1,4 +1,4 @@
-import requests
+﻿import requests
 import json
 from bs4 import BeautifulSoup as bs
 import time, pandas
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     start_time = datetime.now()
     total_comments = []
     url = 'https://sclub.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98vv434&productId=4415077&score=0&sortType=5&page={}&pageSize=10&isShadowSku=0&fold=1'
-    for i in range(0, 16):
+    for i in range(0, 80):
         new_url = url.format(i)
         comms = get_comments(new_url)
         total_comments.extend(comms)
